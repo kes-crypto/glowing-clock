@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+.clock{
+    background: linear-gradient(135deg, #14ffe9,#ffeb3b, #ff00e0);
+    border-radius: 10px;
+    height: 100px;
+    width: 360px;
+    animation: animate 1.5s linear infinite;
+}
+.clock .wrap,
+.clock span{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+.clock .wrap{
+    background: #1b1b1b;
+    z-index: 999;
+    /*opacity: 0;*/
+    height: 85px;
+    width: 345px;
+    text-align: center;
+}
+.clock .wrap #kes{
+    line-height: 85px;
+    color: white;
+    font-size: 60px;
+    background: linear-gradient(135deg, #14ffe9,#ffeb3b, #ff00e0);
+    animation: animate 1.5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+
+}
